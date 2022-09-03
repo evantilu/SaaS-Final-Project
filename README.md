@@ -5,10 +5,10 @@ Let's MEET! is a scheduling web app that assist groups finding the best meeting 
 * Github: https://github.com/YunkaiZhu/saas_final_project
 
 ## Contributors
-* Yunkai Zhu, yz4129
-* Cheng Zhang, cz2637
-* Evan Ting-l Lu, tl3098
-* Daisy Wang, yw3753
+* Yunkai Zhu 
+* Evan Ting-l Lu
+* Cheng Zhang
+* Daisy Wang
 
 ## Softwares
 * Ruby - 2.6.8
