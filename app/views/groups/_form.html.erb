@@ -1,0 +1,20 @@
+<%= form_for @group, :html => {:autocomplete => "off"} do |form| %>
+  <% if @group.errors.any? %>
+    <% @group.errors.full_messages do |message| %>
+      <div>
+        <%= message %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="text-field">
+    <%= form.text_field :groupname, class: "form-control", placeholder: "Groupname", required: true, autofocus: true, :autocomplete => :off %>
+  </div>
+
+  <div class="text-field">
+    <%= form.text_field :description, class: "form-control", placeholder: "Description", required: true, :autocomplete => :off %>
+  </div>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,31 @@
+<% users_groups = Group.where("admin_id = ?", current_user.id)%>
+
+<main>
+
+  <div>
+    <h1> My Groups</h2>
+    <% current_user.groups.each do |group| %>
+      <div>
+        <div>
+          <div>
+            <%= link_to "@#{group.groupname}",
+                        group_path(group)
+            %>
+            <span><%= group.description %></span>
+            <div>
+              <%= link_to "View",
+                          group_path(group)
+              %>
+              <%= link_to "Edit",
+                          group_path(group)
+              %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+
+
+</main>

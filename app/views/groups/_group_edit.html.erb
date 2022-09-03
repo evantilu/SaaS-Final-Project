@@ -1,0 +1,33 @@
+<% if @group %>
+  <nav role = "sub">
+    <ul>
+      <li>
+        <%= link_to "Dashboard",
+                    group_path(@group),
+                    class:"nav-link active"
+        %>
+      </li>
+      <% if current_user.groups.include? @group %>
+          <li>
+            <%= link_to "Quit Group",
+                        quit_path(:id => @group.id),
+                        method: :delete
+            %>
+          </li>
+        <% else %>
+          <%= link_to "Join",
+                      join_path(:id => @group.id),
+                      method: :post
+          %>
+          </li>
+        <% end %>
+      <li>
+        <%= link_to "Members",
+                    members_path(@group),
+                    class:"nav-link"
+        %>
+      </li>
+    </ul>
+  </nav>
+
+<% end %>

@@ -1,0 +1,131 @@
+nav[role = "main"] {
+        background-color: #333;
+        margin: 0;
+        overflow: hidden;
+    }
+nav[role = "sub"] {
+        background-color: #333;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+    }
+nav[role = "subsub"] {
+        background-color: #FFF0F5;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+nav ul{
+    margin: 5;
+    padding: 0;
+}
+ 
+/* Create a style for the first level items */
+nav li {
+    display: block;
+    display: inline;
+    list-style-type: none;
+    color: #aaa;
+    line-height: 5 em;
+    padding: 1em 1em;
+    text-decoration: none;
+    }
+
+nav li:hover {
+    background-color: #666;
+}
+/* display the submenu on mouse over main menu item*/
+nav li:hover > ul{
+    position:absolute;
+    display : block;
+}
+
+ body {
+        background-color: #FFFAF0;
+        font-family: "Gill Sans", sans-serif;
+    }
+    
+    .sign-in {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: 400px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    }
+    
+    
+    .text-field {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    
+    form.form1 {
+        padding-top: 40px;
+    }
+    
+    .password-field {
+            width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+    
+   
+    .text-field:focus, .password-field:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+        
+    }
+    
+    .other-links {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #E1BEE7;
+        padding-top: 15px;
+    }
+    
+    a {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #E1BEE7;
+        text-decoration: none
+    }
+    
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+        }
+    }
+
+    .simple-calendar {
+        margin: 0 auto;
+    }
+
+        

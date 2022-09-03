@@ -1,0 +1,13 @@
+<h1>Let's Meet</h1>
+
+<div class = "simple-calendar">
+<%= link_to 'Event addition', new_event_path %>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+  <% events.each do |event| %>
+    <div>
+      <%= link_to "#{event.title}", event_path(event) %>
+    </div>
+  <% end %>
+<% end %>
+</div>

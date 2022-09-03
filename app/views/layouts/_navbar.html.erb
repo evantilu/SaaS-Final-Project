@@ -1,0 +1,37 @@
+<nav role = "main">
+  <div>
+    <ul>
+      <% if signed_in? %>
+        <li>
+          <%= link_to current_user.email,
+                      index_path
+          %>
+
+        </li>
+        <li>
+          <%= link_to "My Groups",
+                      my_groups_path
+          %>
+        </li>
+        <li>
+          <%= link_to "All Groups",
+                      groups_path
+          %>
+        </li>
+        <li>
+          <%= link_to "New Group",
+                      new_group_path
+          %>
+        </li>
+        <li>
+          <%= link_to "Log Out",
+                      sign_out_path,
+                      method: :delete
+          %>
+        </li>
+        <% users_groups = Group.where("admin_id = ?", current_user.id)%>
+
+      <% end %>
+    </ul>
+  </div>
+</nav>

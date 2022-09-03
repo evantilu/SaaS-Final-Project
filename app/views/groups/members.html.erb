@@ -1,0 +1,18 @@
+  <div>
+    <nav role = "subsub">
+      <h1><%= "#{@group.groupname}" %></h1>
+      <h5><%= "#{@group.description}" %></h5>
+    </nav>
+    <div>
+    <%= render 'group_edit' %>
+    </div>
+  </div>
+  <div>
+    <h3> Members List</h3>
+    <% @group.users.each do |user| %>
+      <div>
+        <span>@<%= user.email %></span>
+      </div>
+    <% end %>
+
+  </div>

@@ -1,0 +1,38 @@
+  <div>
+    <nav role = "subsub">
+      <h1><%= "#{@group.groupname}" %></h1>
+      <h5><%= "#{@group.description}" %></h5>
+
+    </nav>
+    <div>
+    <%= render 'group_edit' %>
+    </div>
+    <h2>Group Calendar</h2>
+    <small>includes all group events and personal events</small>
+
+    <div class = "simple-calendar">
+      <%= link_to 'Group Event addition', group_event_path(:group_id => @group.id) %>
+      <%= month_calendar events: @user_events + @group_events do |date, user_events|%>
+      <%= date.day %>
+
+      <% user_events.each do |event| %>
+        <div>
+        <%= link_to "#{event.title}" %>
+        </div>
+      <% end %>
+
+
+
+      <% end %>
+    </div> 
+
+    <h3>Group Events</h3>
+    <div><% @group_events.each do |groupevent| %>
+        <div>
+          <%= groupevent.title %>
+          <%= groupevent.start_time %>
+          <%= link_to "Send A Reminder", send_notify_path(id: groupevent.id) %>
+        </div>
+          <% end %>
+    </div>
+  </div>

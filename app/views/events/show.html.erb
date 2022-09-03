@@ -1,0 +1,19 @@
+<!--  app/views/events/show.html.erb -->
+<h2>Details for <em><%= @event.title %></em></h2>
+
+<ul id="details">
+  <li>
+    Start Time:
+    <%= @event.start_time %>
+  </li>
+  <li>
+    Content:
+    <%= @event.content %>
+  </li>
+</ul>
+
+<div class="row">
+  <%= link_to 'Delete', event_path(@event), 'data-method' => 'delete', :class => 'btn btn-danger col-2' %>
+  <%= link_to 'Back to calendar', events_path, :class => 'btn btn-primary col-2' %>
+</div>
+

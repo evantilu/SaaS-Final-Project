@@ -1,0 +1,16 @@
+<main role="main" class="container">
+  <div>
+    <h2>Groups List</h2>
+    <small>Click to view or join</small>
+    <% Group.all.each do |group| %>
+      <div>
+        <p>
+          <%= link_to "@#{group.groupname}",
+                      group_path(group)
+          %>
+          <%= group.description %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</main>
